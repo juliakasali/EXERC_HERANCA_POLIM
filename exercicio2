@@ -1,0 +1,40 @@
+<?php
+
+class Animal{
+  public $nome;
+  public $idade;
+  public $som;
+  public $acao;
+}
+
+class Cachorro extends Animal{
+  public function Cachorro($nom, $id, $so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "correr";
+  }
+  
+}
+
+class Cavalo extends Animal{
+   public function Cavalo($nom, $id, $so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "correr";
+  }
+
+}
+
+class Preguica extends Animal{
+  public function Preguica($nom,$id,$so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "subir em arvore";
+  }
+
+}
+
+?>
