@@ -48,7 +48,7 @@ $animal1 -> setSom();
 $animal2 = new Cavalo ("campeiro", "7 anos", "relinchar");
 $animal2 -> setSom();
 
-$animal3= new Preguica ("lili", "10 anos", "som desconhecido");
+$animal3= new Preguica ("lili", "10 anos", "dormir");
 $animal3 -> setSom();
 
 ?>
