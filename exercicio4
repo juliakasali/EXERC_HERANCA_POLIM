@@ -1,0 +1,75 @@
+<?php
+
+class Veterinario{
+  public $ver;
+  public function examinar($animal){
+    echo "examinando $animal";
+    $this -> ver = true;
+  }
+}
+
+class Animal{
+  public $nome;
+  public $idade;
+  public $som;
+  public $acao;
+
+  public function setSom(){
+    echo "{$this -> nome} {$this -> som}";
+  }
+
+}
+
+class Cachorro extends Animal{
+  public function Cachorro($nom, $id, $so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "correr";
+}
+
+}
+
+class Cavalo extends Animal{
+   public function Cavalo($nom, $id, $so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "correr";
+}
+
+}
+
+class Preguica extends Animal{
+  public function Preguica($nom, $id, $so){
+    $this -> nome = $nom;
+    $this -> idade = $id;
+    $this -> som = $so;
+    $this -> acao = "subir em árvore";
+} 
+
+}
+
+$exam = new Veterinario;
+$animal1 = new Cachorro ("bia", "3 anos", "latir");
+$exam -> examinar($animal1->nome);
+
+ if ($exam -> ver == true){
+   $animal1 -> setSom();
+ }
+ 
+$animal2 = new Cavalo ("campeiro", "7 anos", "relinchar");
+$exam -> examinar($animal2 -> nome);
+
+ if ($exam -> ver == true){
+   $animal2 -> setSom();
+ }
+ 
+$animal3 = new Preguica ("lili", "10 anos", "dormir");
+$exam -> examinar($animal3 -> nome);
+
+ if ($exam -> ver == true){
+   $animal3 -> setSom();
+ }
+ 
+?>
