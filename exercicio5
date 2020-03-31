@@ -1,0 +1,57 @@
+<?php
+
+class Imovel{
+  public $endereco;
+  public $preco;
+}
+
+class Novo extends Imovel{
+  public $adicional;
+  public function Novo($end,$pre){
+    $this -> endereco = $end;
+    $this -> preco = $pre;
+  }
+  public function setAdicional(){
+    $this -> preco = $this -> preco + (($this -> preco * 18)/100); 
+}
+  public function getAdicional(){
+    echo "o preço terá um adicional de 18%";
+}
+}
+
+class Velho extends Imovel{
+  public $desconto;
+  public function Velho($end,$pre){
+    $this -> endereco = $end;
+    $this -> preco = $pre;
+  }
+  public function setDesconto(){
+   $this -> preco = $this -> preco - (($this -> preco * 18)/100); 
+}
+  public function getDesconto(){
+   echo "o preço terá um desconto de 18%";
+}
+}
+
+$imovel1 = new Novo("rua dos bobos n° 0", 30000);
+$imovel1 -> getAdicional(); 
+
+echo "1° imóvel:(Novo)";
+echo "Endereço: {$imovel1 -> endereco}";
+echo "Preço: R${$imovel1 -> preco}";
+
+$imovel1 -> setAdicional();
+echo "Preco com adicional: {$imovel1 -> preco}";
+
+
+$imovel2 = new Velho("rua dos bobos n° 1", 35000);
+$imovel2 -> getDesconto(); 
+
+echo "2° imóvel:(Velho)";
+echo "Endereço: {$imovel2 -> endereco}";
+echo "Preço: R${$imovel2 -> preco}";
+
+$imovel2 -> setDesconto();
+echo "Preço com desconto: {$imovel2 -> preco}";
+
+?>
